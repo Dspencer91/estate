@@ -1,0 +1,20 @@
+<div class="booyah-box">
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), class: "form-log in") do |f| %>
+  <div class="text-center mb-4">
+  <div class="form-label-group">
+        <%= f.email_field :email, autofocus: true, class: "form-control", id:"inputEmail", placeholder: "Email address" %>
+        <br>
+     <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "form-control", id: "inputPassword"  %>
+  </div>
+
+  <div class="checkbox mb-3">
+    <label>
+      <input type="checkbox" value="remember-me"> Remember me
+    </label>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
+  <p class="mt-5 mb-3 text-muted text-center">© 2017-2019</p>
+
+<%= render "devise/shared/links" %>
+<% end %>
+</div>
