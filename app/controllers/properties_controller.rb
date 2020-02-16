@@ -9,10 +9,7 @@ class PropertiesController < ApplicationController
 
   # GET /properties/1
   # GET /properties/1.json
-
   def show
-    @place = Place.find(params[:id])
-    @comment = Comment.new
   end
 
   # GET /properties/new
