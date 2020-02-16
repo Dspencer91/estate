@@ -9,7 +9,10 @@ class PropertiesController < ApplicationController
 
   # GET /properties/1
   # GET /properties/1.json
+
   def show
+    @place = Place.find(params[:id])
+    @comment = Comment.new
   end
 
   # GET /properties/new
@@ -25,7 +28,7 @@ class PropertiesController < ApplicationController
   # POST /properties.json
   def create
     @property = Property.new(property_params)
-    @property.account_id = current_accout.id
+    @property.account_id = current_account.id
 
     respond_to do |format|
       if @property.save
