@@ -64,7 +64,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 
 gem 'carrierwave', "0.10.0"
-gem 'fog'
+gem 'fog', '~> 1.37.0'
+
+gem 'mini_magick' 
+
 
 gem 'jquery-rails'
 gem 'popper_js', '~> 1.11'
