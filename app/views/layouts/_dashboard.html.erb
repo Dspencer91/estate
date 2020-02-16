@@ -2,8 +2,15 @@
   <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Property Finder</a>
   <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
   <ul class="navbar-nav px-3">
-    <li class="nav-item text-nowrap">
-      <a class="nav-link" href="#">Sign out</a>
-    </li>
-  </ul>
+          <% if account_signed_in? %>
+          <li class="nav-item text-nowrap">
+            <%= link_to "Log out", destroy_account_session_path, method: :delete, class: "nav-link" %>
+          </li>
+          <% else %>
+          <li class="nav-item text-nowrap">
+          <%= link_to "Sign in", new_account_session_path, class: "nav-link" %> </li>
+          <li class="nav-item text-nowrap">
+          <%= link_to "Create account", new_account_registration_path, class: "nav-link" %>     </li>
+        <% end %>
+      </ul>
 </nav>
