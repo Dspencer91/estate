@@ -64,7 +64,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
 
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 2.0'
 gem 'fog', '~> 1.37.0'
 
 gem 'mini_magick' 
@@ -79,5 +79,6 @@ source 'https://rails-assets.org' do
 end
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'
+  gem "factory_bot_rails"
 end
 gem 'simple_form'
