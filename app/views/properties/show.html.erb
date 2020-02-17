@@ -23,4 +23,7 @@
   <%= @property.bathrooms %>
 </p>
 
+<%= image_tag @property.photo.url, class: "img-fluid" %>
+
+
 <%= link_to 'Edit', edit_property_path(@property), class: "btn btn-successs" %> |
